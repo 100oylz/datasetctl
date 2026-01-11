@@ -2,5 +2,28 @@
 name = "datasetctl"
 version = "0.1.0"
 edition = "2024"
+authors = ["Your Name <you@example.com>"]
+description = "一个轻量级的数据集管理工具，支持原始数据组织与用户工作区的软链接管理。"
+readme = "README.md"
+repository = "github.com"
+license = "MIT"
+keywords = ["dataset", "management", "cli", "symlink"]
+categories = ["command-line-utilities", "development-tools"]
 
 [dependencies]
+# 命令行解析 (2026年稳定版)
+clap = { version = "4.5.54", features = ["derive"] }
+# 用户主目录定位
+home = "0.5.12"
+# 结构化错误定义
+thiserror = "2.0.17"
+
+
+
+[profile.release]
+# 优化发布包体积
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
