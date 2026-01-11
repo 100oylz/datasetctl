@@ -1,6 +1,6 @@
 [package]
 name = "datasetctl"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 authors = ["Your Name <you@example.com>"]
 description = "一个轻量级的数据集管理工具，支持原始数据组织与用户工作区的软链接管理。"
