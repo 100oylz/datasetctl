@@ -14,6 +14,6 @@ pub enum AppError {
     #[error("数据集 {0} 不存在")]
     DatasetNotFound(String),
 
-    #[error("未知的预处理方案: {0}")]
-    SchemeNotFound(String),
+    #[error("数据集[{0}]中未知的预处理方案: {1} ")]
+    SchemeNotFound(String,String),
 }
